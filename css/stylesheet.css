@@ -1,0 +1,816 @@
+@charset "UTF-8";
+/* line 3, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+* {
+  box-sizing: border-box;
+  color: #454545; }
+
+@font-face {
+  font-family: 'objectivebold_italic';
+  src: url("../fonts/objective-bold-italic-webfont.woff2") format("woff2"), url("../fonts/objective-bold-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'objectivebold';
+  src: url("../fonts/objective-bold-webfont.woff2") format("woff2"), url("../fonts/objective-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'objectivemedium';
+  src: url("../fonts/objective-medium-webfont.woff2") format("woff2"), url("../fonts/objective-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'noto_sans_jpbold';
+  src: url("../fonts/notosansjp-bold-webfont.woff2") format("woff2"), url("../fonts/notosansjp-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'noto_sans_jpmedium';
+  src: url("../fonts/notosansjp-medium-webfont.woff2") format("woff2"), url("../fonts/notosansjp-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 53, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+html {
+  font-size: 62.5%; }
+
+/* line 57, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+body {
+  font-family: "objectivemedium", "noto_sans_jpmedium", sans-serif; }
+
+/*フォント*/
+/* line 64, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+h1 {
+  font-family: 'objectivebold_italic'; }
+
+/* line 68, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+h2 {
+  font-family: 'noto_sans_jpbold'; }
+
+/* line 72, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+h3 {
+  font-family: 'objectivebold_italic'; }
+
+/* line 76, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+h4 {
+  font-family: 'objectivebold_italic'; }
+
+/* line 80, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+h5 {
+  font-family: "noto_sans_jpmedium"; }
+
+/* line 84, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+p {
+  font-family: "noto_sans_jpmedium"; }
+
+/*共通*/
+/* line 89, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+a {
+  text-decoration: none; }
+
+/* line 93, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.container {
+  width: 80.07812vw;
+  margin: 0 auto; }
+  @media (max-width: 670px) {
+    /* line 93, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .container {
+      width: auto;
+      padding: 0 1rem; } }
+
+/*要素のフェードイン*/
+/* line 105, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.fadein {
+  opacity: 0.1;
+  transform: translate(0, 50px);
+  transition: all 500ms; }
+
+/* line 111, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.fadein.scrollin {
+  opacity: 1;
+  transform: translate(0, 0); }
+
+/*テキストスタイル*/
+/* line 118, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.sub-tit {
+  width: fit-content;
+  font-size: 6rem;
+  color: #000000;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1; }
+  /* line 125, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .sub-tit:after {
+    z-index: -5;
+    content: attr(data-text) "";
+    color: transparent;
+    text-stroke: 1px #7AD6BB;
+    -webkit-text-stroke: 1px #7AD6BB;
+    position: absolute;
+    top: -0.5rem;
+    left: 0.5rem; }
+  @media (max-width: 670px) {
+    /* line 118, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .sub-tit {
+      font-size: 4rem; } }
+
+/* line 140, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.sub-tit-cap {
+  font-family: 'objectivebold_italic';
+  font-size: 2.4rem;
+  color: #7AD6BB;
+  text-align: center; }
+  @media (max-width: 670px) {
+    /* line 140, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .sub-tit-cap {
+      font-size: 1.2rem; } }
+
+/* line 151, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.sub-tit02 {
+  font-size: 3.2rem; }
+  @media (max-width: 670px) {
+    /* line 151, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .sub-tit02 {
+      font-size: 1.6rem; } }
+
+/* line 159, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.number {
+  font-family: 'objectivebold_italic';
+  font-size: 10rem;
+  color: black; }
+  @media (max-width: 670px) {
+    /* line 159, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .number {
+      font-size: 4rem; } }
+
+/* line 169, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.text-content {
+  font-size: 2rem;
+  line-height: 2; }
+  @media (max-width: 670px) {
+    /* line 169, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .text-content {
+      font-size: 1.3rem; } }
+
+/*header*/
+/* line 180, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.header {
+  width: 100%;
+  /*min-height: 112px;*/
+  position: fixed;
+  top: 0;
+  z-index: 99; }
+  /* line 187, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .header-contents {
+    width: 100%;
+    height: 100%;
+    margin: 3.6rem 0 0 3.5rem; }
+    @media (max-width: 670px) {
+      /* line 187, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .header-contents {
+        margin: 1.8rem 0 0 1.7rem; } }
+    /* line 196, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .header-contents a {
+      font-size: 4.2rem;
+      color: white;
+      letter-spacing: 0.2; }
+      @media (max-width: 670px) {
+        /* line 196, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+        .header-contents a {
+          font-size: 2.1rem; } }
+
+/*top*/
+/* line 209, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.top-wrapper {
+  height: 80rem;
+  position: relative;
+  min-height: 350px; }
+  @media (max-width: 670px) {
+    /* line 209, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .top-wrapper {
+      height: 35rem; } }
+
+/* line 218, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.mv-movie {
+  height: 57.8rem;
+  overflow: hidden;
+  min-height: 202px; }
+  @media (max-width: 670px) {
+    /* line 218, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .mv-movie {
+      height: 20.2rem; } }
+  /* line 226, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .mv-movie video {
+    width: 100vw; }
+
+/* line 232, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.mv-text {
+  position: absolute;
+  top: 38rem; }
+  @media (max-width: 670px) {
+    /* line 232, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .mv-text {
+      position: absolute;
+      top: 15rem; } }
+
+/* line 242, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.tit {
+  color: #7AD6BB;
+  display: inline-block;
+  font-size: 18rem;
+  font-weight: bold;
+  margin-bottom: 3.6rem; }
+  /* line 249, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .tit:last-of-type {
+    margin-bottom: 0; }
+  @media (max-width: 670px) {
+    /* line 242, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .tit {
+      font-size: 6rem;
+      margin-bottom: 1rem; } }
+
+/*about*/
+/* line 263, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+#about {
+  margin: 25.1rem 0 23.9rem 0; }
+  @media (max-width: 670px) {
+    /* line 263, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    #about {
+      margin: 8rem 0 12rem 0; } }
+
+/* line 270, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.about-text {
+  width: 70.43902%;
+  margin: 0 auto;
+  min-width: 210px; }
+  @media (max-width: 670px) {
+    /* line 270, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .about-text {
+      width: 100%; } }
+  /* line 278, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .about-text h3 {
+    font-size: 3.2rem;
+    text-align: center;
+    margin-bottom: 3.9rem;
+    color: #000000; }
+    @media (max-width: 670px) {
+      /* line 278, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .about-text h3 {
+        font-size: 2rem; } }
+  /* line 288, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .about-text p {
+    font-size: 2.4rem;
+    margin: 0 auto 5.7rem auto;
+    line-height: 2; }
+    @media (max-width: 670px) {
+      /* line 288, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .about-text p {
+        font-size: 1.2rem;
+        margin: 0 auto 2rem auto; } }
+
+/*skills*/
+/* line 305, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+#skills {
+  background-color: #F0F0F0;
+  border: 1px solid transparent;
+  /*marginの相殺回避*/
+  z-index: -99;
+  position: relative; }
+
+/* line 313, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.skills {
+  margin: 16rem 0 23.9rem 0; }
+  @media (max-width: 670px) {
+    /* line 313, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .skills {
+      margin: 8rem 0 8rem 0; } }
+  /* line 320, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .skills h5 {
+    margin: 5.7rem 10rem; }
+    @media (max-width: 670px) {
+      /* line 320, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .skills h5 {
+        margin: 1rem 0 3rem 0;
+        text-align: center; } }
+
+/* line 332, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.coding {
+  margin: 16rem 0 33rem 0; }
+  @media (max-width: 670px) {
+    /* line 332, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .coding {
+      margin: 4rem 0 7rem 0; } }
+
+/* line 341, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.skills-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; }
+  @media (max-width: 670px) {
+    /* line 341, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .skills-text {
+      display: column; } }
+  @media (max-width: 670px) {
+    /* line 348, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .skills-text img {
+      width: 100%;
+      order: 1; } }
+  /* line 355, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .skills-text .text-content {
+    width: 40.97561%; }
+    @media (max-width: 670px) {
+      /* line 355, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .skills-text .text-content {
+        width: 100%;
+        order: 2;
+        margin-top: 1rem; } }
+
+/* line 366, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.design {
+  margin-bottom: 23.9rem; }
+  @media (max-width: 670px) {
+    /* line 366, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .design {
+      margin-bottom: 11rem; } }
+  /* line 373, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .design h5 {
+    text-align: right;
+    margin-right: 0; }
+    @media (max-width: 670px) {
+      /* line 373, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .design h5 {
+        text-align: center; } }
+
+/* line 382, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.design-bg {
+  width: 65.39062%;
+  height: 45.2rem;
+  background-color: #7AD6BB;
+  position: absolute;
+  top: 118.1rem;
+  right: 0;
+  z-index: -98; }
+  @media (max-width: 670px) {
+    /* line 382, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .design-bg {
+      display: none; } }
+
+/* line 395, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.skills-bg {
+  transform: rotate(90deg);
+  transform-origin: left bottom;
+  position: absolute;
+  top: -20rem;
+  left: 0;
+  z-index: -98; }
+  @media (max-width: 670px) {
+    /* line 395, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .skills-bg {
+      position: absolute;
+      top: -5rem;
+      left: 0; } }
+  /* line 408, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .skills-bg p {
+    font-family: 'objectivebold_italic';
+    font-size: 30rem;
+    color: white; }
+    @media (max-width: 670px) {
+      /* line 408, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .skills-bg p {
+        font-size: 10rem; } }
+
+/*works*/
+/* line 423, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+#works {
+  border: 1px solid transparent;
+  /*marginの相殺回避*/ }
+
+/* line 427, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.works {
+  margin-top: 21.2rem; }
+  @media (max-width: 670px) {
+    /* line 427, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .works {
+      margin-top: 7rem;
+      padding: 0 1rem; } }
+  /* line 435, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .works h4 {
+    margin-bottom: 9.6rem; }
+    @media (max-width: 670px) {
+      /* line 435, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .works h4 {
+        margin-bottom: 4rem; } }
+  /* line 443, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .works .sub-tit-cap {
+    margin-bottom: 3rem; }
+    @media (max-width: 670px) {
+      /* line 443, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .works .sub-tit-cap {
+        margin-bottom: 1rem; } }
+
+/* line 454, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.works li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 15.9rem;
+  position: relative;
+  /*
+        img{
+            width:(497.25/1025)*100%;
+        }*/ }
+  @media (max-width: 670px) {
+    /* line 454, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .works li {
+      display: block;
+      margin-bottom: 6rem; } }
+  /* line 464, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .works li:before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background: white;
+    position: absolute;
+    left: -11rem;
+    top: 13.8rem;
+    border: 16px solid #7AD6BB;
+    border-radius: 50%;
+    box-sizing: border-box; }
+    @media (max-width: 670px) {
+      /* line 464, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .works li:before {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: -4rem;
+        top: 8rem;
+        border: 5px solid #7AD6BB;
+        border-radius: 50%; } }
+  /* line 490, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .works li time {
+    display: inline-block;
+    font-size: 3.2rem;
+    margin-bottom: 2.9rem; }
+    @media (max-width: 670px) {
+      /* line 490, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .works li time {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem; } }
+  /* line 502, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .works li .img {
+    width: 48.5122%;
+    height: 33.503rem;
+    background-color: #F0F0F0;
+    text-align: center; }
+    @media (max-width: 670px) {
+      /* line 502, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .works li .img {
+        width: 100%;
+        height: 20rem; } }
+    /* line 513, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .works li .img p {
+      font-family: 'objectivebold_italic';
+      font-size: 3.6rem;
+      color: #000000;
+      margin: 15rem auto; }
+      @media (max-width: 670px) {
+        /* line 513, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+        .works li .img p {
+          margin: 0 auto;
+          padding: 9.2rem 0;
+          font-size: 1.6rem; } }
+  /* line 531, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .works li .works-text {
+    width: 48.78049%; }
+    @media (max-width: 670px) {
+      /* line 531, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .works li .works-text {
+        width: 100%; } }
+  /* line 539, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .works li:last-child {
+    margin-bottom: 11.3rem; }
+
+/* line 545, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.kokorogake {
+  width: 79.5122%;
+  margin: 0 auto 9.7rem auto; }
+  @media (max-width: 670px) {
+    /* line 545, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .kokorogake {
+      width: 100%; } }
+  /* line 553, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .kokorogake h5 {
+    margin-bottom: 2.2rem; }
+
+/* line 559, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.works-bg {
+  margin: 0 auto;
+  width: 90.9375%;
+  border-left: 2px solid #F0F0F0; }
+
+/*hassin*/
+/* line 568, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+#hassin {
+  background-color: #F0F0F0;
+  border: 1px solid transparent;
+  /*marginの相殺回避*/
+  z-index: -99; }
+
+/* line 575, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.hassin {
+  margin: 17.4rem 0 20.2rem 0;
+  height: 156.15rem;
+  position: relative; }
+  @media (max-width: 670px) {
+    /* line 575, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .hassin {
+      margin: 7rem 0 8rem 0;
+      height: auto; } }
+  /* line 585, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .hassin h5 {
+    text-align: right;
+    margin-bottom: 12rem; }
+    @media (max-width: 670px) {
+      /* line 585, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .hassin h5 {
+        text-align: center;
+        margin-bottom: 5rem; } }
+  /* line 595, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .hassin .text-content {
+    width: 46.92683%;
+    position: absolute;
+    right: 11.4rem; }
+    @media (max-width: 670px) {
+      /* line 595, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .hassin .text-content {
+        width: 100%;
+        position: static;
+        margin-bottom: 2rem; } }
+
+/* line 613, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.hassin-imgs img {
+  z-index: 999; }
+  @media (max-width: 670px) {
+    /* line 613, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .hassin-imgs img {
+      margin-bottom: 2rem; } }
+  /* line 620, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .hassin-imgs img:nth-of-type(1) {
+    width: 40.68293%;
+    position: absolute;
+    left: 0; }
+    @media (max-width: 670px) {
+      /* line 620, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .hassin-imgs img:nth-of-type(1) {
+        width: 100%;
+        position: static; } }
+  /* line 631, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .hassin-imgs img:nth-of-type(2) {
+    width: 35.12195%;
+    position: absolute;
+    top: 56.5rem;
+    left: 13.9rem; }
+    @media (max-width: 670px) {
+      /* line 631, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .hassin-imgs img:nth-of-type(2) {
+        width: 100%;
+        position: static; } }
+  /* line 643, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .hassin-imgs img:nth-of-type(3) {
+    width: 35.12195%;
+    position: absolute;
+    top: 42.8rem;
+    right: 0rem; }
+    @media (max-width: 670px) {
+      /* line 643, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .hassin-imgs img:nth-of-type(3) {
+        width: 100%;
+        position: static; } }
+  /* line 655, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .hassin-imgs img:nth-of-type(4) {
+    width: 35.12195%;
+    position: absolute;
+    top: 83.2rem;
+    right: 10.5rem; }
+    @media (max-width: 670px) {
+      /* line 655, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .hassin-imgs img:nth-of-type(4) {
+        width: 100%;
+        position: static; } }
+  /* line 667, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .hassin-imgs img:nth-of-type(5) {
+    width: 51.21951%;
+    position: absolute;
+    left: 0;
+    top: 101.4rem; }
+    @media (max-width: 670px) {
+      /* line 667, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .hassin-imgs img:nth-of-type(5) {
+        width: 100%;
+        position: static; } }
+
+/* line 679, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.hassin-imgs div {
+  width: 51.21951%;
+  height: 31.3rem;
+  background-color: #7AD6BB; }
+  @media (max-width: 670px) {
+    /* line 679, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .hassin-imgs div {
+      display: none; } }
+  /* line 688, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .hassin-imgs div:nth-of-type(1) {
+    position: absolute;
+    top: 37.8rem;
+    left: 9.2rem; }
+  /* line 694, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .hassin-imgs div:nth-of-type(2) {
+    position: absolute;
+    top: 111.6rem;
+    left: 32.7rem; }
+
+/* line 702, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.hassin-imgs h5 {
+  margin-bottom: 0;
+  position: absolute;
+  top: 131.8rem;
+  right: 0; }
+  @media (max-width: 670px) {
+    /* line 702, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .hassin-imgs h5 {
+      width: 100%;
+      position: static;
+      margin-bottom: 2rem; } }
+
+/* line 715, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.hassin-imgs .text-content {
+  width: 55.90244%;
+  position: absolute;
+  top: 147.65rem;
+  left: 32.7rem; }
+  @media (max-width: 670px) {
+    /* line 715, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .hassin-imgs .text-content {
+      width: 100%;
+      position: static; } }
+
+/*history*/
+/* line 733, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+#history {
+  border: 1px solid transparent;
+  /*marginの相殺回避*/ }
+
+/* line 737, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.history {
+  margin-top: 27rem; }
+  @media (max-width: 670px) {
+    /* line 737, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .history {
+      margin-top: 8rem; } }
+  /* line 744, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .history h4 {
+    margin-bottom: 11.6rem; }
+    @media (max-width: 670px) {
+      /* line 744, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .history h4 {
+        margin-bottom: 5rem; } }
+
+/* line 752, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.history-table {
+  width: 79.60976%;
+  margin: 0 auto 14.6rem auto;
+  font-family: 'objectivebold_italic';
+  font-size: 2rem;
+  border-collapse: separate;
+  border-spacing: 2.5rem 0; }
+  @media (max-width: 670px) {
+    /* line 752, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .history-table {
+      width: 100%;
+      margin: 0 auto 4rem auto;
+      font-size: 1.5rem;
+      border-spacing: 1rem 0; } }
+  /* line 767, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .history-table th, .history-table td {
+    width: 100%;
+    padding: 3.7rem 0; }
+  /* line 772, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .history-table th {
+    width: 22.79412%;
+    text-align: right;
+    border-top: 2px solid #7AD6BB; }
+  /* line 778, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .history-table time {
+    color: #7AD6BB; }
+  /* line 782, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .history-table td {
+    width: 74.14216%;
+    color: #000000;
+    border-top: 2px solid #454545; }
+
+/*value*/
+/* line 792, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+#value {
+  border: 1px solid transparent;
+  /*marginの相殺回避*/
+  background-color: #262626; }
+
+/* line 797, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.value {
+  margin-top: 22.6rem; }
+  @media (max-width: 670px) {
+    /* line 797, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .value {
+      margin-top: 8rem; } }
+  /* line 804, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .value .sub-tit-cap {
+    margin-bottom: 3.3rem; }
+    @media (max-width: 670px) {
+      /* line 804, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .value .sub-tit-cap {
+        margin-bottom: 5rem; } }
+  /* line 813, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .value h4 {
+    width: 65.3125%;
+    font-size: 6rem;
+    margin: 0 auto 10.9rem auto; }
+    @media (max-width: 670px) {
+      /* line 813, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .value h4 {
+        width: 100%;
+        font-size: 3rem;
+        margin: 0 auto 4rem auto;
+        text-align: center; } }
+
+/* line 828, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.swiper-container {
+  width: 100%; }
+
+/* line 832, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.slide-item {
+  width: 57.26562%;
+  border: none; }
+  /* line 836, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .slide-item img {
+    width: 100%;
+    border: none; }
+
+/* line 843, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+.value-msg {
+  height: 73.5rem;
+  position: relative;
+  background: url("../images/index_img_hassin_03@2x.png");
+  background-size: cover;
+  background-position: left center; }
+  @media (max-width: 670px) {
+    /* line 843, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    .value-msg {
+      height: 50rem; } }
+  /* line 855, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .value-msg:after {
+    content: '';
+    background-color: rgba(38, 38, 38, 0.91);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0; }
+  /* line 865, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .value-msg div {
+    width: 55.54687%;
+    padding: 22.6rem 0 17.5rem 0;
+    margin: 0 auto; }
+    @media (max-width: 670px) {
+      /* line 865, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .value-msg div {
+        width: 100%;
+        padding: 10rem 2rem; } }
+  /* line 876, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+  .value-msg .text-content {
+    color: white;
+    margin-bottom: 4.5rem;
+    position: relative;
+    z-index: 1; }
+    @media (max-width: 670px) {
+      /* line 876, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+      .value-msg .text-content {
+        margin-bottom: 2rem; } }
+
+/*footer*/
+/* line 891, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+footer {
+  height: 34.2rem;
+  background-color: #7AD6BB; }
+  @media (max-width: 670px) {
+    /* line 891, /Users/uetanoriko/Desktop/メンタ課題３/menta_works_standard-portfolio/css/stylesheet.scss */
+    footer {
+      height: 12rem; } }
+
+/*# sourceMappingURL=stylesheet.css.map */

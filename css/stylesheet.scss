@@ -1,0 +1,899 @@
+@import "mixin";
+
+* {
+    box-sizing: border-box;
+    color:$font-color;
+}
+@font-face {
+    font-family: 'objectivebold_italic';
+    src: url('../fonts/objective-bold-italic-webfont.woff2') format('woff2'),
+         url('../fonts/objective-bold-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'objectivebold';
+    src: url('../fonts/objective-bold-webfont.woff2') format('woff2'),
+         url('../fonts/objective-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'objectivemedium';
+    src: url('../fonts/objective-medium-webfont.woff2') format('woff2'),
+         url('../fonts/objective-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'noto_sans_jpbold';
+    src: url('../fonts/notosansjp-bold-webfont.woff2') format('woff2'),
+         url('../fonts/notosansjp-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'noto_sans_jpmedium';
+    src: url('../fonts/notosansjp-medium-webfont.woff2') format('woff2'),
+         url('../fonts/notosansjp-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+html{
+    font-size:62.5%; 
+}
+
+body {
+    font-family:"objectivemedium", "noto_sans_jpmedium", sans-serif;
+}
+
+/*フォント*/
+
+
+h1{
+    font-family: 'objectivebold_italic';
+}
+
+h2{
+    font-family: 'noto_sans_jpbold';   
+}
+
+h3{
+    font-family: 'objectivebold_italic';
+}
+
+h4{
+    font-family: 'objectivebold_italic';
+}
+
+h5{
+    font-family: "noto_sans_jpmedium";
+}
+
+p{
+    font-family: "noto_sans_jpmedium";
+}
+
+/*共通*/
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: (1025/1280)*100vw;
+    margin: 0 auto;
+    
+        @media (max-width:670px) {
+            width: auto;
+            padding:0 1rem;
+            
+    }
+}
+
+/*要素のフェードイン*/
+.fadein {
+	opacity : 0.1;
+	transform : translate(0, 50px);
+	transition : all 500ms;
+	}
+
+.fadein.scrollin {
+	opacity : 1;
+	transform : translate(0, 0);
+	}
+
+/*テキストスタイル*/
+
+.sub-tit{
+    width:fit-content;
+    font-size:6rem;
+    color: $accent-font-color;
+    margin:0 auto;
+    position:relative; 
+    z-index: 1;
+        &:after {
+            z-index: -5;
+            content: attr(data-text)"";
+            color:rgba(0,0,0,0);
+            text-stroke:1px $main-color;
+            -webkit-text-stroke:1px $main-color;
+            position: absolute;
+            top:-0.5rem;
+            left:0.5rem;
+            }
+    @media (max-width:670px) {
+        font-size:4rem;
+    }
+    
+}
+.sub-tit-cap{
+    font-family:'objectivebold_italic';
+    font-size: 2.4rem;
+    color:$main-color;
+    text-align: center;
+    
+        @media (max-width:670px) {
+        font-size:1.2rem;
+        }
+}
+
+.sub-tit02{
+    font-size:3.2rem;
+    
+    @media (max-width:670px) {
+        font-size:1.6rem;
+    }
+}
+
+.number{
+    font-family:'objectivebold_italic';
+    font-size:10rem;
+    color:black;
+    
+    @media (max-width:670px) {
+        font-size:4rem;
+    }
+}
+
+.text-content{
+    font-size:2rem;
+    line-height: 2;
+
+    @media (max-width:670px) {
+        font-size:1.3rem;
+    }
+}
+
+
+/*header*/
+.header{
+    width:100%;
+    /*min-height: 112px;*/
+    position: fixed;
+    top:0;
+    z-index:99;
+    
+    &-contents{
+        width:100%; 
+        height:100%;
+        margin:3.6rem 0 0 3.5rem;
+        
+        @media (max-width:670px) {
+           margin:1.8rem 0 0 1.7rem;
+        }
+        
+        a{
+            font-size:4.2rem;
+            color:white;
+            letter-spacing:0.2;
+            
+            @media (max-width:670px) {
+                font-size:2.1rem;
+            }
+        }
+    }       
+}
+
+/*top*/
+.top-wrapper {
+    height:80rem;
+    position:relative;
+    min-height:350px;
+    @media (max-width:670px) {
+        height:35rem;
+    }
+}
+
+.mv-movie{
+    height:57.8rem;
+    overflow: hidden;
+    min-height:202px;
+    @media (max-width:670px) {
+        height:20.2rem;
+    }
+    
+    video{
+    width:100vw;
+    }
+}
+   
+
+.mv-text{
+    position: absolute;
+    top: 38rem;
+    
+        @media (max-width:670px) {
+            position: absolute;
+            top: 15rem;            
+            }
+}
+
+.tit{
+    color: $main-color;
+    display:inline-block;
+    font-size: 18rem;
+    font-weight: bold;
+    margin-bottom:3.6rem;
+        
+    &:last-of-type{
+        margin-bottom:0;
+    }
+            
+    
+        @media (max-width:670px) {
+            font-size: 6rem;
+            margin-bottom:1rem;   
+            }   
+
+}
+
+
+/*about*/
+#about{
+    margin: 25.1rem 0 23.9rem 0;
+        @media (max-width:670px) {
+            margin: 8rem 0 12rem 0;           
+            }
+}
+
+.about-text{
+    width:(722/1025)*100%;
+    margin:0 auto;
+    min-width: 210px;
+        @media (max-width:670px) {
+            width:100%;          
+            }
+
+    h3{
+        font-size:3.2rem;
+        text-align: center;
+        margin-bottom:3.9rem;
+        color:$accent-font-color;
+        
+        @media (max-width:670px) {
+            font-size:2rem;
+        }
+    }
+    p{
+        font-size:2.4rem;
+        margin:0 auto 5.7rem auto;
+        line-height:2;
+        
+        @media (max-width:670px) {
+            font-size:1.2rem;
+            margin:0 auto 2rem auto;
+        }
+    }      
+        
+    
+}
+
+
+
+/*skills*/
+#skills{
+    background-color:$accent-color;
+    border: 1px solid transparent; /*marginの相殺回避*/
+    z-index: -99;
+    position:relative;
+
+}
+
+.skills{
+    margin:16rem 0 23.9rem 0;
+    
+        @media (max-width:670px) {
+            margin:8rem 0 8rem 0;
+        }    
+    
+    h5{
+        margin:5.7rem 10rem;
+        
+        @media (max-width:670px) {
+            margin:1rem 0 3rem 0;
+            text-align: center;
+        }  
+    }
+    
+}
+
+
+.coding{
+    margin:16rem 0 33rem 0;
+
+    @media (max-width:670px) {
+            margin:4rem 0 7rem 0;
+            }
+                   
+    }
+
+.skills-text{
+    @include flex(space-between,flex-start);
+
+    @media (max-width:670px) {
+            display:column;
+            } 
+    
+    img{
+    @media (max-width:670px) {
+            width:100%;
+            order:1;
+            }        
+    }
+    
+    .text-content{
+        width:(420/1025)*100%;
+
+        @media (max-width:670px) {
+            width:100%;
+            order:2;
+            margin-top:1rem;
+        }  
+    }
+}
+
+.design{
+    margin-bottom:23.9rem;
+    
+        @media (max-width:670px) {
+            margin-bottom:11rem;
+        }  
+    
+    h5{
+        text-align: right;
+        margin-right:0;
+        @media (max-width:670px) {
+            text-align: center;
+        }  
+    }
+}
+
+.design-bg{
+    width:(837/1280)*100%;
+    height:45.2rem;
+    background-color: $main-color;
+    position:absolute;
+     top:118.1rem;
+     right:0;
+    z-index:-98;
+        @media (max-width:670px) {
+            display:none;
+        } 
+}
+  
+.skills-bg{
+    transform:rotate(90deg);
+    transform-origin:left bottom;
+    position:absolute;
+    top:-20rem;
+    left:0;
+    z-index:-98;
+
+        @media (max-width:670px) {
+            position:absolute;
+            top:-5rem;
+            left:0;
+    } 
+    p{
+        font-family: 'objectivebold_italic';
+        font-size:30rem;
+        color:white;
+            @media (max-width:670px) {
+            font-size:10rem;
+        } 
+        
+    }
+    
+}
+
+
+
+/*works*/
+#works{
+    border: 1px solid transparent; /*marginの相殺回避*/
+}
+
+.works{
+        margin-top:21.2rem;
+
+        @media (max-width:670px) {
+            margin-top:7rem;
+            padding: 0 1rem;
+        } 
+    
+    h4{
+        margin-bottom:9.6rem;
+        
+        @media (max-width:670px) {
+            margin-bottom:4rem;
+        } 
+    }
+    
+    .sub-tit-cap{
+            margin-bottom:3rem;
+
+        @media (max-width:670px) {
+            margin-bottom:1rem;
+        } 
+    }
+}
+
+
+.works{
+    li{
+        @include flex(space-between,flex-start);
+        margin-bottom:15.9rem;
+        position:relative;
+        
+            @media (max-width:670px) {
+            display:block;
+            margin-bottom:6rem;
+        } 
+        
+        &:before{
+            content: '';
+            width: 50px;
+            height: 50px;
+            background: white;
+            position: absolute;
+            left: -11rem;
+            top: 13.8rem;
+            border:16px solid $main-color;
+            border-radius: 50%;
+            box-sizing: border-box;
+            
+                @media (max-width:670px) {
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                left: -4rem;
+                top: 8rem;
+                border:5px solid $main-color;
+                border-radius: 50%;
+            } 
+        
+        }
+
+ 
+
+        time{
+            display:inline-block;
+            font-size:3.2rem;
+            margin-bottom:2.9rem;
+            
+            @media (max-width:670px) {
+            font-size:2rem;
+            margin-bottom:1rem;
+            margin-top:1rem;
+        } 
+        }
+        
+        .img{
+            width:(497.25/1025)*100%;
+            height:33.503rem;
+            background-color:$accent-color;
+            text-align: center;
+            
+            @media (max-width:670px) {
+            width:100%;
+            height:20rem;
+        } 
+            
+            p{
+                font-family:'objectivebold_italic';
+                font-size:3.6rem;
+                color:$accent-font-color;
+                margin:15rem auto;
+                    @media (max-width:670px) {
+                     margin:0 auto;
+                    padding:9.2rem 0;
+                    font-size:1.6rem;
+                } 
+            }
+        }
+        
+        /*
+        img{
+            width:(497.25/1025)*100%;
+        }*/
+        
+        .works-text{
+            width:(500/1025)*100%;
+            
+            @media (max-width:670px) {
+            width:100%;
+        } 
+        }
+        
+        &:last-child{
+           margin-bottom:11.3rem; 
+        }
+    }
+}
+
+.kokorogake{
+    width:(815/1025)*100%;
+    margin:0 auto 9.7rem auto;
+
+        @media (max-width:670px) {
+            width:100%;
+        } 
+    
+    h5{
+        margin-bottom:2.2rem;
+    }
+    
+}
+
+.works-bg{
+    margin:0 auto;
+    width:(1164/1280)*100%;
+    border-left:2px solid $accent-color;
+}
+
+
+
+/*hassin*/
+#hassin{
+    background-color:$accent-color;
+    border: 1px solid transparent; /*marginの相殺回避*/
+    z-index: -99;
+
+}
+
+.hassin{
+    margin:17.4rem 0 20.2rem 0;
+    height:156.15rem;
+    position:relative;
+    
+        @media (max-width:670px) {
+        margin:7rem 0 8rem 0;
+        height:auto;
+        } 
+    
+    h5{
+        text-align: right;
+        margin-bottom:12rem;
+        
+        @media (max-width:670px) {
+        text-align: center;
+        margin-bottom:5rem;
+        }
+    }
+    
+    .text-content{
+        width:(481/1025)*100%;
+        position:absolute;
+        right:11.4rem;
+        
+        @media (max-width:670px) {
+            width:100%;
+            position:static;
+            margin-bottom: 2rem;
+        
+        }
+    }
+    
+
+    
+}
+
+    .hassin-imgs{
+        img{
+            z-index:999;
+            
+             @media (max-width:670px) {
+            margin-bottom:2rem;
+            }
+            
+        &:nth-of-type(1){
+            width:(417/1025)*100%;
+            position:absolute;
+            left:0;
+            
+                 @media (max-width:670px) {
+                width:100%;
+                position:static;
+                }
+            }
+        
+        &:nth-of-type(2){
+            width:(360/1025)*100%;
+            position:absolute;
+            top:56.5rem;
+            left:13.9rem;
+            
+                @media (max-width:670px) {
+                width:100%;
+                position:static;
+                }
+            }
+        
+        &:nth-of-type(3){
+            width:(360/1025)*100%;
+            position:absolute;
+            top:42.8rem;
+            right:0rem;
+            
+                @media (max-width:670px) {
+                width:100%;
+                position:static;
+                }
+            }
+        
+        &:nth-of-type(4){
+            width:(360/1025)*100%;
+            position:absolute;
+            top:83.2rem;
+            right:10.5rem;
+            
+                @media (max-width:670px) {
+                width:100%;
+                position:static;
+                }
+            }
+        
+        &:nth-of-type(5){
+            width:(525/1025)*100%;
+            position:absolute;
+            left:0;
+            top:101.4rem;
+            
+                @media (max-width:670px) {
+                width:100%;
+                position:static;
+                }
+            }
+    }
+        div{
+            width:(525/1025)*100%;
+            height:31.3rem;
+            background-color:$main-color;
+            
+                @media (max-width:670px) {
+                display: none;
+                }
+            
+            &:nth-of-type(1){
+            position:absolute;
+            top:37.8rem;
+            left:9.2rem;
+            }
+        
+        &:nth-of-type(2){
+            position:absolute;
+            top:111.6rem;
+            left:32.7rem;
+            }
+            
+        }
+        
+        h5{
+            margin-bottom:0;
+            position:absolute;
+            top:131.8rem;
+            right:0;
+                
+                @media (max-width:670px) {
+                width:100%;
+                position:static;
+                margin-bottom: 2rem;
+                }
+        }
+        
+        .text-content{
+            width:(573/1025)*100%;
+            position:absolute;
+            top:147.65rem;
+            left:32.7rem;
+            
+                @media (max-width:670px) {
+                width:100%;
+                position:static;
+                }
+        }
+}
+
+
+
+
+
+/*history*/
+#history{
+    border: 1px solid transparent; /*marginの相殺回避*/
+}
+
+.history{
+        margin-top:27rem;
+    
+            @media (max-width:670px) {
+                margin-top:8rem;
+                }
+    
+    h4{
+        margin-bottom:11.6rem;
+            @media (max-width:670px) {
+                margin-bottom:5rem;
+                }
+    }
+}
+
+.history-table{
+    width:(816/1025)*100%;
+    margin:0 auto 14.6rem auto;
+    font-family: 'objectivebold_italic';
+    font-size:2rem;
+    border-collapse: separate;
+    border-spacing: 2.5rem 0;
+    
+        @media (max-width:670px) {
+            width:100%;
+            margin:0 auto 4rem auto;
+            font-size:1.5rem;
+            border-spacing: 1rem 0;
+                }
+
+th,td{
+    width:100%;
+    padding:3.7rem 0;
+}
+
+th{
+    width:(186/816)*100%;
+    text-align: right;
+    border-top:2px solid $main-color;
+}
+
+    time{
+        color:$main-color;
+    }
+
+td{
+    width:(605/816)*100%;
+    color:$accent-font-color;
+    border-top:2px solid $font-color;
+}
+
+}
+
+
+/*value*/
+#value{
+    border: 1px solid transparent; /*marginの相殺回避*/
+    background-color:$value-background-color;
+}
+
+.value{
+        margin-top:22.6rem;
+            
+        @media (max-width:670px) {
+                margin-top:8rem;
+                }
+    
+    .sub-tit-cap{
+            margin-bottom:3.3rem;
+            
+            @media (max-width:670px) {
+                margin-bottom:5rem;
+                }
+        
+    }
+    
+    h4{
+        width:(836/1280)*100%;
+        font-size:6rem;
+        margin:0 auto 10.9rem auto;
+        
+        @media (max-width:670px) {
+            width:100%;
+            font-size:3rem;
+            margin:0 auto 4rem auto;
+            text-align: center;
+                }
+    }
+    
+}
+
+.swiper-container{
+    width:100%;
+}
+
+.slide-item{
+    width:(733/1280)*100%;
+    border: none;
+    
+    img{
+        width:100%;
+        border: none;
+    }
+}
+
+
+.value-msg{
+    height:73.5rem;
+    position: relative;
+    background:url("../images/index_img_hassin_03@2x.png");
+    background-size: cover;
+    background-position:left center;
+    
+    @media (max-width:670px) {
+            height:50rem;
+                }
+    
+    
+    &:after {
+        content: '';
+        background-color: rgba($value-background-color, 0.91);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    
+    div{
+        width:(711/1280)*100%;
+        padding:22.6rem 0 17.5rem 0;
+        margin:0 auto; 
+        
+        @media (max-width:670px) {
+            width:100%;
+            padding:10rem 2rem;
+                }
+    }
+    
+  .text-content{
+        color:white;
+        margin-bottom:4.5rem;
+        position: relative;
+        z-index:1;
+      
+        @media (max-width:670px) {
+            margin-bottom:2rem;
+                }
+      
+    }
+    
+}
+
+/*footer*/
+footer{
+    height:34.2rem;
+    background-color:$main-color;
+    
+    @media (max-width:670px) {
+            height:12rem;
+                }
+}
+

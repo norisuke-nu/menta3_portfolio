@@ -1,0 +1,59 @@
+$main-color:#7AD6BB;
+$accent-color:#F0F0F0;
+$font-color:#454545;
+$accent-font-color:#000000;
+$value-background-color:#262626;
+
+
+@mixin flex($justify,$align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap:wrap;
+}
+
+@mixin lhCrop($line-height) {
+  &::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    margin-top: calc((1 - #{$line-height}) * 0.5em);
+  }
+}
+
+@mixin sectionlist-img($rotate){
+    width:20.04rem;
+    transform: rotate($rotate);
+    transform-origin: center 50%; 
+}
+
+@mixin button{
+    display: block;
+    background-color:white;
+    border-radius: 3em;
+    font-weight: normal;
+    color:$font-color;
+    text-align: center;
+    box-shadow:0.7rem 0.7rem $font-color;
+    transition:background-color .3s;
+
+        &:hover{
+            color:black;
+            background-color:#E0E0E0;     
+        }
+    
+        &:active{
+            position:relative;
+            top:0.7rem;
+            left:0.7rem;
+            
+            box-shadow:none;
+            }
+    
+
+        
+}
+
+
+
